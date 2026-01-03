@@ -35,6 +35,12 @@ export default function UpdateRestaurant(){
                 <option>North</option>
                 <option>South</option>
             </select>
+            <select value={form.parkingLot} onChange={(e)=>setForm({...form, parkingLot:e.target.value==="true"})}>
+                <option value="true"> Avaolable</option>
+                <option value="false"> no parking</option>
+                
+            </select>
+            <button onClick={handleUpdate}> update</button>
         </div>
-    )
+    );
 }
