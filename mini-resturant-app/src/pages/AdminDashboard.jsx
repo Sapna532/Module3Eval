@@ -10,7 +10,7 @@ export default function AdminDashboard(){
         image:"https://coding-platform.s3.amazonaws.com/dev/lms/tickets/7524df6e-46fa-4506-8766-eca8da47c2f1/2izhqnTaNLdenHYF.jpeg"
     });
     useEffect(()=> {
-        setDate(JSON.parse(localStorage.getItem("evaData"))|| []);
+        setData(JSON.parse(localStorage.getItem("evaData"))|| []);
     }, []);
     const addResturant=()=>{
         if(!form.resturantName || !form.address){
