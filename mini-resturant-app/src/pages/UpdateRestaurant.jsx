@@ -18,5 +18,24 @@ export default function UpdateRestaurant(){
         alert("Updated");
         navigate("/admin/dashboard");
     };
-    if(!form)
+    if(!form) return <h3> Loading...</h3>;
+    return(
+        <div>
+            <h2> update Resturant</h2>
+            <input  value={form.resturantName} onChange={(e)=> setForm({ ...form, resturantName:e.target.value})}/>
+            <input  value={form.address} onChange
+            ={(e)=> setForm({ ...form, address:e.target.value})}/>
+
+            <select value= {form.type} onChange={(e) => setForm({...form, type: e.target.value})}>
+                <option>Rajasthani</option>
+                <option>Gujarati</option>
+                <option>Jain</option>
+                <option>Thai</option>
+                <option>Mughalai </option>
+                <option>North</option>
+                <option>South</option>
+            </select>
+             <select value={form.type} onChange={(e) => setForm({...form, type: e.target.value})}></select>
+        </div>
+    )
 }
