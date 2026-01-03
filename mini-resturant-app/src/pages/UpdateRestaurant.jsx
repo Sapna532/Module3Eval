@@ -35,7 +35,6 @@ export default function UpdateRestaurant(){
                 <option>North</option>
                 <option>South</option>
             </select>
-             <select value={form.type} onChange={(e) => setForm({...form, type: e.target.value})}></select>
         </div>
     )
 }
